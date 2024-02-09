@@ -1,0 +1,9 @@
+# The main pipeline for symcor_dlt_dabs
+resources:
+  pipelines:
+    symcor_dlt_dabs_pipeline:
+      name: symcor_dlt_dabs_pipeline
+      target: symcor_dlt_dabs_${bundle.environment}
+      libraries:
+        - notebook:
+            path: ../src/dlt_pipeline.ipynb
